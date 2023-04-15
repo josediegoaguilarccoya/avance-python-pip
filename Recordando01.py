@@ -1,6 +1,11 @@
-# la etapa 01 consta en repasar todo lo que tenga que ver con python
+# La etapa 01 consta en repasar todo lo que tenga que ver con python
+# ******************************************************************
 
-#### Clase 01:
+#### Clase 01: Tu primer programa
+
+print ("***********************************************************")
+print ("Clase 01")
+print ("***********************************************************")
 
 ### Primero: el print.
 
@@ -24,7 +29,11 @@ b
 c
 d
 """
-#### Clase 02: 
+#### Clase 02: Variables
+
+print ("***********************************************************")
+print ("Clase 02")
+print ("***********************************************************")
 
 ### Primero: Las variables, cajas etiquetables a las que designas ciertos objetos.
 
@@ -47,13 +56,21 @@ print (My_age)
 Your_name = input("What is your name? ")
 print ("Yo soy", Your_name)
 
-#### Clase 03:
+#### Clase 03: Tipoes de datos
 
-## Comprovaremos los distintos tipos de datos con la función "type"
+print ("***********************************************************")
+print ("Clase 03")
+print ("***********************************************************")
+
+## Comprobaremos los distintos tipos de datos con la función "type"
 ## Hay distintos tipos de variables: Strings (son cadenas de texto, str); int (valores enteros); booleans (Solo hay dos: Verdadero o Falso. bool)
 ## Los inputs solo recogen los datos como str.
 
-#### Clase 04:
+#### Clase 04: Strings
+
+print ("***********************************************************")
+print ("Clase 04")
+print ("***********************************************************")
 
 ## Los stings se pueden unir con una operación llamada concatenación.
 
@@ -79,9 +96,92 @@ print ("Versión 01 " + template)
 template = "Hola, mi nombre es {} y mi apellido es {}". format(name, last_name)
 print ("versión 02 " + template)
 
-## La tercera es más censilla
+## La tercera es más sencilla
 
 template = f"Hola, mi nombre es {name} y mi apellido es {last_name}"
 print ("versión 03 " + template)
+
+#### Clase 05: Numbers
+
+print ("***********************************************************")
+print ("Clase 05")
+print ("***********************************************************")
+
+### Primero; los str o números enteros.
+
+## Los números no se declaran entre comillas, si no se vuelven strings
+
+vidas = "123"
+print (vidas)
+print (type(vidas))
+
+vidas = 123
+print (vidas)
+print (type(vidas))
+
+### Segundo; los números con una precisión decimal o float
+
+temperatura = 12.56 
+print (temperatura)
+print(type(temperatura))
+
+### Tercero; las variables que contengan un valor numérico se pueden actualizar operandolas con el valor previo de la variable.
+
+Age = 3 
+print (Age)
+
+Age = Age + 5 
+print (Age)
+
+### Cuarto; Una sintaxis especial.
+
+Age = Age - 2
+print (Age)
+
+Age -= 2
+print (Age)
+
+## Las dos expresiones escritas previamente son equivalentes
+
+### Quinto; Cuando tenemos un número muy grande o muy pequeño python lo expresa en notación científica.
+
+number = 5400000000000000000.234 
+print (number)
+
+number = 0.000000000000001232131
+print (number)
+
+### Sexto; Es buena práctica escribir el nombre de las variables teniendo en cuenta lo que representan o guardan como valor. De esa manera sabremos que guarda la variable con tan solo leer el nombre.
+
+#### Clase 06: Booleans 
+
+print ("***********************************************************")
+print ("Clase 06")
+print ("***********************************************************")
+
+### Primero; los booleans 
+
+## Los valores booleanos solo tienen dos valores: verdadero o falso. Se escriben iniciando en mayuscula e ingles. 
+
+Trabajaste = True 
+print (Trabajaste)
+print (type(Trabajaste))
+
+Trabajaste = False 
+print (Trabajaste)
+print (type(Trabajaste))
+
+### Segundo; podemos invertir el valor de un booleano con el operador "not".
+
+print (not Trabajaste)
+
+Trabajaste = not Trabajaste 
+print (Trabajaste)
+
+
+
+
+
+
 
 
