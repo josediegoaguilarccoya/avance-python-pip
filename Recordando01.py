@@ -178,6 +178,51 @@ print (not Trabajaste)
 Trabajaste = not Trabajaste 
 print (Trabajaste)
 
+#### Clase 07: Transformación de tipos
+
+print ("***********************************************************")
+print ("Clase 07")
+print ("***********************************************************")
+
+### Primero; se puede cambiar el tipo de dato de manera dinámica, es una ventaja de la flexibilidad de Python
+
+name = "José"
+print(type(name))
+name = 12
+print(type(name))
+name = True 
+print(type(name))
+
+### Segundo; dependiendo del tipo de dato toma de distintas formas los operadores matemáticos. Por ejemplo: el operador (+) concatena strings y suma enteros y datos numéricos. Esto hace que no podamos operar con el signo de la adición un string y un entero.
+
+print ("come" + "manzanas")
+print (12 + 32)
+#print ("name" + 32)
+
+## el ejemplo anterior no podría ser corrido en la terminal.
+
+### Tercero; podemos combertir de la siguiente manera un entero a un string 
+
+age = 13 
+print ("Mi edad es " + str(age))
+
+## Otro modo de transformar es con la función format
+
+print (f"Mi edad es {age}")
+
+## Ahora podemos hacer un programa sencillo. Con una intención opuesta, ya no queremos combertir un entero en un string, ahora queremos que un string se vuelva un entero.
+
+age = input("Escribe tu edad ==>  ")
+print(type(age))
+age = int(age)
+age += 10
+print(f"Tu edad en 10 años será {age}")
+
+
+
+
+
+
 
 
 
