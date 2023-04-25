@@ -432,6 +432,246 @@ print ("*" * 30)
 
 print ("Este proyecto se llevará a cabo en el archivo Recordando01_Game.py")
 
+#### Clase 15: String recargado 
+
+print ("*" * 30)
+print ("Clase 15")
+print ("*" * 30)
+
+### Primero: "in" para saber si una palabra esta incluida en un string. Teda ana respuesta booleana para confirmarte la existencia de un conjunto de caracteres en un strign
+
+text = "Yo sé programar en python" 
+print ("JavaScript" in text)
+print ("Python" in text)
+
+### Segundo: "len" pra evaluar el tamaño de un string
+
+size = len(text)
+print (size)
+
+### Tercero: "upper"
+
+print (text)
+print (text.upper())
+
+### Cuarto: "lower" para pasarlo todo a minúscula 
+
+print(text)
+print (text.lower())
+
+### Quinto: "count" para saber el número de veces que se repite una letra en un string 
+
+"print (text.count(a))"
+
+### Sexto: "swapcase" invierte las mayúsculas y las minúsculas
+
+print (text.swapcase())
+
+### Septimo: "startswith" Para consultar si la palabra inicia con determinado conjunto de caracteres
+
+print (text.startswith("Ella"))
+
+### Octavo: "endswith" para saber con que conjunto de caracteres termina un string 
+
+print (text.endswith("python"))
+
+### Noveno: "replace" para sustituir un conjunto de caracteres determinados por otro conjunto de caracteres dados
+
+print (text.replace("Python", "JavaScript"))
+
+### Décimo: "capitalize" pone el primer caracter en mayucula
+
+text_2 = "Este es un título"
+
+print(text_2)
+print(text_2.capitalize())
+
+### Undecimo: "title" para poner todas las letras del inicio de cada palabra en mayuscula 
+
+print(text_2.title())
+
+### Duodecimo: "title" isdigit para saver si un strin es un conjunto de dígitos, esta función te responde con booleans
+
+print(text_2.isdigit)
+
+#### Clase 16: Indexing y slicing
+
+print ("*" * 30)
+print ("Clase 16")
+print ("*" * 30)
+
+### Primero: Cada caracte ocupa un lugar en la cadena de texto, iniciado desde la posición cero.
+
+text = "Tu quieres comer zandía"
+print(text[0])
+print(text[1])
+print(text[2])
+print(text[3])
+print(text[4])
+print(text[5])
+print(text[6])
+print(text[7])
+print(text[8])
+print(text[9])
+
+### Segundo: Para evaluar el último lugar se puede hacer de la siguiente manera 
+
+size = len(text)
+print ("size ==>  ", size)
+print(text[size - 1])
+
+### Tercero: Para hacer lo mismo que en el segundo punto, pero mucho más fácil, podemos hacerlo de la siguiente manera.
+
+print(text[-1])
+print(text[-2])
+print(text[-3])
+print(text[-4])
+print(text[-5])
+print(text[-6])
+print(text[-7])
+print(text[-8])
+print(text[-9])
+print(text[-10])
+ 
+### Cuarto: slicing, podemos sacar ciertas pacrtes del texto teniendo en cuenta los conceptos anteriores.
+
+print(text[0:5])
+
+## Lo anterior se puede expresar de la siguiente manera, obiando el cero 
+
+print(text[:5])
+
+## Para dominar el slicing tines que dominar las posiciones del conjunto de caracteres que quieras sacar de determinados strings.
+
+print(text[12:-22])
+
+### Quinto: para escoger caracteres con saltos de posición se hace de la siguiente manera
+
+print(text[12:23:2])
+
+#### Clase 17: Listas 
+
+print ("*" * 30)
+print ("Clase 17")
+print ("*" * 30)
+
+### Primero: Una lista se delimita por corchetes, es una estructura que guarda un conjunto de datos: 
+
+numeros = [2, 3, "hello", "hola"]
+
+print (numeros)
+print (type(numeros))
+
+## Se puede aplicar Indexing y slicing con las listas
+
+print (numeros[3])
+print (numeros [:3])
+
+## Los strings no son mutables, pero las listas si son mutables.
+
+"""
+text = "Hola bebe, ya que contigo no sirve la..."
+text[0] = "Z"
+"""
+numeros[1] = 3 
+print (numeros)
+
+## Se puede saber si hay un elemento en una lista o no. 
+
+print (2 in numeros)
+
+#### Clase 18: Métodos de listas
+
+print ("*" * 30)
+print ("Clase 18")
+print ("*" * 30)
+
+### Primero: CRUD; significa Create, Read, Update and Delete 
+
+### Segundo: Create 
+
+numeros = [2,3,4,5,2,3,4,9]
+
+### Tercero: Read
+
+print (numeros[4])
+
+### Cuarto: Update
+
+numeros [-2] = 28
+print (numeros)
+
+### Quinto: append para agregar valores al final de la lista
+
+numeros.append(123)
+print(numeros)
+
+### Sexto: insert es una manera de incluir un nuevo dato en la lista determinando la posición en la que lo quieres tener 
+
+numeros.insert(3, "palo")
+print (numeros)
+
+## Insertar o remplaza al elemento anterior on el nuevo incluido, solo reordena los elmentos corriendo para delante los elementos de las listas.
+
+### Septimo: se puede sumar listas, de la siguiente manera.
+
+todo = ["todo1","todo2","todo3"]
+
+new_list = numeros + todo
+print (todo)
+
+### Octavo: para saber en que posición esta un elemento, se usa la función index.
+
+index = new_list.index("todo2")
+new_list[index] = "camarón con cola"
+print (new_list)
+
+### Noveno: para remover usamos remove
+
+new_list.remove("todo1")
+print(new_list)
+
+## Pra eliminar también se puede usar "pop"
+
+new_list.pop(4)
+print(new_list)
+
+### Décimo: una manera de cambiar el orden de la lista es con reverse 
+
+new_list.reverse()
+print(new_list)
+
+### Undecimo: una manera de ordenarlo automática, teniendo como criterios el orden numérico y el orden alfabetico es con la función sort 
+
+numbers = [1,2,3,4,5]
+numbers.sort()
+print(numbers)
+
+string = ["la","le","li","lo","lu"]
+string.sort()
+print(string)
+
+## sort no puede ordenar una lista con elementos de distintas naturalesas, no puede comparar en un sentido ordinal strings y números.
+
+print(new_list.sort())
+
+#### Clase 19: Tuplas
+
+print ("*" * 30)
+print ("Clase 19")
+print ("*" * 30)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
