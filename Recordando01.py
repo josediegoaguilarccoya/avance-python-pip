@@ -1,6 +1,13 @@
 # La etapa 01 consta en repasar todo lo que tenga que ver con python
 # ******************************************************************
 
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+
+##### Primeros pasos con Python
+
+
 #### Clase 01: Tu primer programa
 
 print ("*" * 30)
@@ -55,6 +62,13 @@ print (My_age)
 
 Your_name = input("What is your name? ")
 print ("Yo soy", Your_name)
+
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+
+##### Tipos de datos en Python  
+
 
 #### Clase 03: Tipoes de datos
 
@@ -219,6 +233,13 @@ age += 10
 print(f"Tu edad en 10 años será {age}")
 
 ### Cuarto; cuando lo que escribimos no son dígitos, la función int no puede tarnsformarlos a un número entero y te arroja un error.
+
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+
+#####  Operadores y condicionales
+
 
 #### Clase 08: Operadores aritméticos 
 
@@ -431,6 +452,12 @@ print ("Clase 14")
 print ("*" * 30)
 
 print ("Este proyecto se llevará a cabo en el archivo Recordando01_Game.py")
+
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+
+##### Listas y diccionarios
 
 #### Clase 15: String recargado 
 
@@ -653,7 +680,7 @@ print(string)
 
 ## sort no puede ordenar una lista con elementos de distintas naturalesas, no puede comparar en un sentido ordinal strings y números.
 
-print(new_list.sort())
+"print(new_list.sort())"
 
 #### Clase 19: Tuplas
 
@@ -661,30 +688,278 @@ print ("*" * 30)
 print ("Clase 19")
 print ("*" * 30)
 
+### Primero: las tuplas sonparecidas a las listas, guardan información en ella.
 
+numbers = (1,2,3,4,3,3,3,3)
+strings = ("rojo","azul","verde","amarillo")
 
+print (numbers)
+print(type(numbers))
 
+print (strings)
+print (type(strings))
 
+### Segundo: se puede acceder a los datos de la tupla de la misma manera que se puede acceder a una lista o a un string.
 
+print ("Primero ==>  ", numbers[3])
 
+### Tercero: ¿¿en que se diferencian una tupla y una lista??: Tupla vs Lista: la tupla es inmutable y la lista es mutable, puedes cambiar, eliminar y mover los valores de una lista, pero con una tupla eso no se puede llegar a hacer
 
+## "numbers.append(10)"" te hará saltar un error
 
+### Cuarto: Hay metodos con los que si cuenta una tula y son los siguientes: 
 
+## Para saber cuál es la posición de un elemento en la tupla.
+print (numbers.index(3))
 
+## Para contar cuantas veces se repite un elemento en una tupla. 
+print (numbers.count(3))
 
+#### Quinto: para cuando necesitemos ingresar datos a una tupla lo podemos hacer transformando a la tupla en una lista, de la siguiente manera.
 
+my_list = list(numbers)
+print (my_list)
 
+my_list[1] = "chuli"
+print (my_list)
 
+#### Sexto: ahora para debolverlo a su forma de tupla lo podemos hacer con los siguientes metodos.
 
+my_tuple = tuple(my_list)
+print( my_tuple)
 
+#### Clase 20: Proyecto: Tuplas
 
+print ("*" * 30)
+print ("Clase 20")
+print ("*" * 30)
 
+#### Primero: este proyecto se llevará a cabo en el archivo Recordando02_Game.py 
 
+#### Clase 21: Diccionarios: definición y lectura
 
+print ("*" * 30)
+print ("Clase 21")
+print ("*" * 30)
 
+### Primero: en un diccionario se relaciona una llave con un valor. Se denota de la siguiente forma.
 
+my_dict = {
+    "conejo":"zanahoria",
+    "perro":"carne", 
+    "gallina":"pienso"
+            }
 
+print (my_dict)
+print (type(my_dict))
 
+### Segundo: Los metodos que encontramos para lo qu resecta a un diccionario.
 
+## len: para saber cuántos elementos tenemos en un diccionario
 
+print (len(my_dict))
+
+## Para ubicar algun elmento deceado podemos hacerlo a través de los siguientes métodos:
+
+print (my_dict["conejo"])
+
+## get: también busca valores en el diccionario, la mayor diferencia es que cuando un dato que solicitemos no se encuentre en el diccionario el lo maneje de manera adecuada imprimiendo un none. 
+
+print (my_dict.get("perro"))
+print (my_dict.get("luchi"))
+
+## Para detectar si hay una llave en un diccionario podemos hacerlo de la siguiente forma.
+
+print ("lsuu" in my_dict)
+print ("conejo" in my_dict)
+
+#### Clase 22: Diccionarios: inserción y actualización 
+
+print ("*" * 30)
+print ("Clase 22")
+print ("*" * 30)
+
+### Primero: para actualizar un valor
+
+person = {
+    "name":"José Diego",
+    "last_name":"Aguilar Ccoya",
+    "skills":"Aimilación",
+    "age":18,
+    "langs":["python", "java script"]
+}
+
+print (age)
+
+person["age"] = 19
+
+print (person)
+
+"person[age] += 10" "(Error a arreglar)"
+
+print (person)
+
+### Segundo: "del" para eliminar un valr del diccionario
+
+del person["age"]
+print(person)
+
+## otro recurso para eliminar 
+
+person.pop("name")
+print(person)
+
+## "items" para optener los items de un diccionario, lo envia como una lista de tuplas.
+
+print("items")
+print(person.items())
+
+## "keys"
+
+print("keys")
+print(person.keys())
+
+## "values"
+
+print("values")
+print(person.values())
+
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+
+##### Ciclos
+
+#### Clase 24: Loops: While
+
+print ("*" * 30)
+print ("Clase 24")
+print ("*" * 30)
+
+### Primero: los ciclos while son parecidos a las condicionales if, en el sentido de que necesitan un True para poder ejecutarce.
+
+## Este es un ejemplo de un ciclo infinito. La manera de detenerlo es con "ctrl + C".  
+
+"""
+while True:
+    print("se ejecuto")
+"""
+
+counter = 0
+
+while counter < 10:
+
+    counter += 1
+    print (counter)
+
+## break: Para interrumpir un ciclo se puede hacer de la siguiente manera
+
+counter = 0
+while counter < 20:
+    counter += 1 
+    if counter == 15:
+        break
+    print (counter)
+
+## continue: Otra manera de romper un ciclo
+
+counter = 0
+while counter < 20:
+    counter += 1 
+    if counter < 15:
+        continue
+    print (counter)
+    print ("no se contará porque continue hace que salte a la siguiete iteración")
+
+#### Clase 25: Loops: For
+
+print ("*" * 30)
+print ("Clase 25")
+print ("*" * 30)
+
+### Primero: for actua sobre un rango previamente definido
+
+for element in range(1, 21):
+    print(element)
+
+## Es util además para recorrer ciertas estructuras 
+
+## Ejemplo lista. 
+
+list = [12, 32, 34, 16, 13, 59, 23]
+
+for elemento in list: 
+    print (elemento)
+
+## Ejemplo diccionarios 
+
+product = {
+  'name': 'Camisa',
+  'price': 100,
+  'stock': 89
+}
+
+for key in product:
+  print(key, '=>', product[key])
+
+for key, value in product.items():
+  print(key, '=>', value)
+
+people = [
+  {
+    'name': 'nico',
+    'age': 34
+  },
+  {
+    'name': 'zule',
+    'age': 45
+  },
+  {
+    'name': 'santi',
+    'age': 4
+  }
+]
+
+for person in people:
+  print('name =>', person['name'])
+
+## Segundo: while vs for; while actua deacuerdo a una condición y for actua bajo una condición y unos parámetros dados.
+
+#### Clase 26: Ciclos anidados
+
+print ("*" * 30)
+print ("Clase 26")
+print ("*" * 30)
+
+### Primero: 
+
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+## Cuando tengas ciclos anidados debes hacer que las variables sean diferentes  
+
+print(matriz[0][1])
+
+for row in matriz:
+  print(row)
+  for column in row:
+    print(column)
+
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+
+##### Cierre
+    
+
+#### Clase 27: Proyecto: aplicando ciclos
+
+print ("*" * 30)
+print ("Clase 27")
+print ("*" * 30)
+
+### Esta parte del proyecto esta en Recordando.02_Game.py
 
